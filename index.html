@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Bliss</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Miniver&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #3c1e1e; /* Deep coffee brown */
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 60px 0 60px;
+      background: transparent;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      gap: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links li a:hover {
+      color: #ff9800; /* Orange highlight on hover */
+    }
+
+    .section-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+    }
+
+    .hero-details.white-bg {
+      background: #fff;
+      color: #111;
+      padding: 40px 32px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      max-width: 400px;
+      margin-right: 40px;
+    }
+
+    .hero-details.white-bg .title {
+      font-family: 'Miniver', cursive;
+      color: #ff9800;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-details.white-bg .subtitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .hero-details.white-bg .description {
+      font-size: 1rem;
+      margin-bottom: 28px;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .button.order-now {
+      background: #ff9800;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .button.order-now:hover {
+      background: #e68900;
+    }
+    .button.contact-us {
+      background: transparent;
+      color: #111;
+      border: 2px solid #111;
+      padding: 12px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+    .button.contact-us:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .hero-image-wrapper.coffee-bg {
+      flex: 1;
+      min-width: 320px;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    .hero-image {
+      max-width: 260px;
+      z-index: 2;
+    }
+
+    @media (max-width: 900px) {
+      .section-content {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .hero-details.white-bg {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+      .hero-image-wrapper.coffee-bg {
+        min-width: 220px;
+        min-height: 220px;
+      }
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .main-layout {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar-nav {
+      width: 320px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 0 16px rgba(0,0,0,0.04);
+      z-index: 10;
+    }
+    .sidebar-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+      gap: 32px;
+    }
+    .sidebar-nav ul li a {
+      color: #222;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .sidebar-nav ul li a:hover {
+      color: #ff9800;
+    }
+    .hero-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #3c1e1e;
+    }
+    .hero-image-wrapper.coffee-bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      min-width: 320px;
+      min-height: 350px;
+    }
+    .hero-image {
+      max-width: 260px;
+      z-index: 2;
+    }
+    @media (max-width: 900px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .sidebar-nav {
+        width: 100vw;
+        height: 120px;
+        align-items: flex-start;
+        justify-content: center;
+        box-shadow: none;
+      }
+      .sidebar-nav ul {
+        flex-direction: row;
+        height: 100%;
+        gap: 18px;
+      }
+      .hero-section {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;"><ellipse cx="12" cy="17" rx="8" ry="3" fill="#fff"/><path d="M19 8c0-3-3-5-7-5S5 5 5 8c0 2.5 2.5 4.5 6 4.5s6-2 6-4.5z" fill="#fff"/><path d="M19 8c0-3-3-5-7-5S5 5 5 8c0 2.5 2.5 4.5 6 4.5s6-2 6-4.5z" stroke="#ff9800" stroke-width="1.5"/><path d="M19 8c1.5 0 2.5 1.5 2.5 3s-1 3-2.5 3" stroke="#ff9800" stroke-width="1.5" fill="none"/>
+</svg>
+        <span>Coffee</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-layout">
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button id ="menu-open-button" class="fas fa-bars">
+     </button>
+    </nav>
+    <section class="hero-section">
+      <div class="section-content">
+        <div class="hero-details white-bg">
+          <h2 class="title">Best Coffee</h2>
+          <h3 class="subtitle">Make your day great with our special coffee!</h3>
+          <p class="description">Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+          <div class="buttons">
+            <a href="#" class="button order-now">Order Now</a>
+            <a href="#" class="button contact-us">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper coffee-bg">
+          <img src="coffee-cup.png" alt="Coffee Cup" class="hero-image">
+        </div>
+      </div>
+    </section>
+  </div>
+ <script src ="Script.js"></script>
+</body>
+</html>
